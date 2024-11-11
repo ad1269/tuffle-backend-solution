@@ -1,0 +1,12 @@
+compile = "make server"
+run = "./wordle_backend"
+hidden = [
+	"main", "wordle_backend",
+	"**/*.o", "**/*.d", ".ccls-cache", ".clang-format",
+	"Makefile", "compile_flags.txt", "shell.nix"
+]
+
+[languages.cpp]
+pattern = "**/*.{cc,h}"
+[languages.cpp.languageServer]
+start = "clangd"
